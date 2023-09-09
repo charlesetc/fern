@@ -1,0 +1,108 @@
+You can have some text.
+
+months
+------
+- "august"
+- "march"
+- "april"
+- "may"
+
+> months
+
+months2
+-------
+- august
+- march
+- april
+- may
+- july 4th
+
+> months2
+
+list2
+-----
+- "hi there"
+- "there"
+
+> list2
+
+> (function () stringx = require 'pl.stringx' return 2 end)()
+
+> stringx.strip("  hi ")
+
+> stringx
+
+> 2 * 3
+
+> 3 * 5
+
+> i =  2
+
+> vim.api.nvim_buf_get_lines(0, 23, 24, false)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+my_list
+-------
+- "hi"
+- "hi"
+- 2
+- nil
+- { x = 2 }
+
+> my_list[1] 
+
+> table
+
+mytest
+------
+- 2
+- 3  
+
+> mytest
+
+> 2 + 3 
+
+> my_list
+
+> 2 + 3 ~= 2
+
+> 2 * 8
+
+> 2 * 3
+
+> { 2, 3, 4}
+
+> { 3, 4, 5, 6 }
+
+> 2 * 3 + 1 * 123 / 4
+
+> math.random(100000)
+
+> 2 + 3
+
+> 2 - 2 * 3  / 123 * math.random()
+
+> 2 + 2 * 3
+
+[add to list] [pop list]
+
+> string.match("a_b", "^[%w_]*$")
+
+> string.match("a_b c", "^[%w_]*$")
