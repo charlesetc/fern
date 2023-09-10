@@ -1,11 +1,33 @@
 You can have some text.
 
+Hi this is some text.
+
+
+this
+----
+- 2
+- 3
+- 4
+- { x =  2 }
+- { y =  2, z = 4 }
+
+> this
+
 months
 ------
 - "august"
 - "march"
 - "april"
 - "may"
+- true
+
+a
+
+
+{
+local x = 2 
+}
+
 
 > months
 
@@ -18,6 +40,7 @@ months2
 - july 4th
 
 > months2
+
 
 list2
 -----
@@ -66,7 +89,7 @@ my_list
 - nil
 - { x = 2 }
 
-> my_list[1] 
+> my_list
 
 > table
 
@@ -106,3 +129,25 @@ mytest
 > string.match("a_b", "^[%w_]*$")
 
 > string.match("a_b c", "^[%w_]*$")
+
+> vim.tbl_islist(2)
+
+> vim.tbl_islist({})
+
+> vim.tbl_islist({ "hi" })
+
+
+mylist
+------
+- 2
+- 3
+- wow
+- { x = 2 }
+- hi there
+- okay
+
+> mylist
+
+> vim.tbl_islist(mylist)
+
+
