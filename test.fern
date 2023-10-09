@@ -136,7 +136,6 @@ mytest
 
 > vim.tbl_islist({ "hi" })
 
-
 mylist
 ------
 - 2

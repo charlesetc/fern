@@ -1,4 +1,4 @@
-require 'init'
+dofile('/Users/charles/code/fern/init.lua')
 local dbg = require 'debugger'
 local stringx = require 'pl.stringx'
 local ns = vim.api.nvim_create_namespace('fern')

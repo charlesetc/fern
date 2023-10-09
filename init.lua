@@ -3,7 +3,8 @@ dofile("/Users/charles/.lua/init.lua")
 
 -- setup `require` to work with dependencies
 function addpath(path)
-  package.path = package.path .. ';./' .. path .. '/?.lua;./' .. path .. '/?/?.lua'
+    local dir = debug.getinfo(2, "S").source:sub(2):match("(.*/)")
+    package.path = package.path .. ';' .. dir .. path .. '/?.lua;' .. dir .. path .. '/?/?.lua'
 end
 
 addpath('dependencies')
