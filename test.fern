@@ -11,7 +11,7 @@ this
 - { x =  2 }
 - { y =  2, z = 4 }
 
-> this
+> return this
 
 months
 ------
@@ -28,8 +28,7 @@ a
 local x = 2 
 }
 
-
-> months
+> return months
 
 months2
 -------
@@ -39,7 +38,7 @@ months2
 - may
 - july 4th
 
-> months2
+> return months2
 
 
 list2
@@ -47,21 +46,27 @@ list2
 - "hi there"
 - "there"
 
-> list2
+> return list2
 
 > (function () stringx = require 'pl.stringx' return 2 end)()
 
-> stringx.strip("  hi ")
+> return stringx.strip("  hi ")
 
-> stringx
+> return stringx
 
-> 2 * 3
+> return 2 * 3
 
-> 3 * 5
+> return 3 * 5
+
+> x = 2
+
+> return x
 
 > i =  2
 
-> vim.api.nvim_buf_get_lines(0, 23, 24, false)
+> return i
+
+> return vim.api.nvim_buf_get_lines(0, 23, 24, false)
 
 
 
@@ -126,15 +131,15 @@ mytest
 
 [add to list] [pop list]
 
-> string.match("a_b", "^[%w_]*$")
+> return string.match("a_b", "^[%w_]*$")
 
-> string.match("a_b c", "^[%w_]*$")
+> return string.match("a_b c", "^[%w_]*$")
 
-> vim.tbl_islist(2)
+> return vim.tbl_islist(2)
 
-> vim.tbl_islist({})
+> return vim.tbl_islist({})
 
-> vim.tbl_islist({ "hi" })
+> return vim.tbl_islist({ "hi" })
 
 mylist
 ------
@@ -145,8 +150,7 @@ mylist
 - hi there
 - okay
 
-> mylist
+> return mylist
 
-> vim.tbl_islist(mylist)
-
+> return vim.tbl_islist(mylist)
 

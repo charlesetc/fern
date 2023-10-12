@@ -4,13 +4,12 @@ local stringx = require 'pl.stringx'
 local ns = vim.api.nvim_create_namespace('fern')
 
 local function eval_lua_expression(s)
-  local expr, error = loadstring("return " .. s)
+  local expr, error = loadstring( s)
   if not expr then
     return "error: " .. error
   end
 
   local ok, result = pcall(expr)
-
 
   if vim.tbl_islist(result) then
     local lines = {}
@@ -20,12 +19,15 @@ local function eval_lua_expression(s)
     return table.concat(lines, "\n")
   end
 
-
-  local output = vim.inspect(result)
   if not ok then
-    return "error: " .. output
+    return "error: " .. vim.inspect(result)
   end
-  return output
+
+  if result == nil then
+    return nil
+  else
+    return vim.inspect(result)
+  end
 end
 
 local function read_list_item(s)
@@ -46,6 +48,10 @@ local function read_list_item(s)
 end
 
 local function annotate(lineno, str)
+  if str == nil then
+    return
+  end
+
   local virtlines = {}
   local i = 0
   for line in str:gmatch("[^\r\n]+") do
